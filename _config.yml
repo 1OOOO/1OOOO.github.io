@@ -1,0 +1,51 @@
+safe: false
+permalink: /posts/:title.html
+exclude:
+  - README.md
+
+tipue_search:
+  include:
+    pages: true
+  exclude:
+    files: [index.html, search/index.html, README.md]
+
+name: 城寒
+host: chenhang.space
+desc: 随便写写
+
+custom:
+    category:
+        default: 各种
+        spark: Spark
+        elasticsearch: ElasticSearch
+        golang: Golang
+        scala: Scala
+        ml: MachineLearning
+    categories:
+      - name:  default
+        title: 各种
+
+      - name:  spark
+        title: Spark
+    
+      - name:  elasticsearch
+        title: ElasticSearch
+
+      - name:  golang
+        title: Golang
+
+      - name:  scala
+        title: Scala
+
+      - name:  ml
+        title: MachineLearning
+
+    scrollingLoadCount: 0                          # 滚屏自动加载文章数量，“0”为关闭
+
+meta:
+    author:
+        name: 城寒
+        email: emptypointer@yahoo.com
+        gravatar: bce8a736fe1d465d3841606af34fde2a    # Gravatar头像标识
+
+    gravatar: http://en.gravatar.com/avatar/          # Gravatar头像服务器地址

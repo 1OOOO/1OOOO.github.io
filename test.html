@@ -1,0 +1,36 @@
+<html>
+ <head>
+ <meta name="referrer" content="never">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"/>       
+ <style type="text/css">
+    html,body,.img { width:100%; height:100%; }
+ </style>
+ <script language="javascript">
+  function fetch(){
+    var host=document.getElementById("host").value;
+    var index=document.getElementById("index").value;
+    var url=host.replace("#", index)
+    document.getElementById("img").innerHTML='<img src="http://' + url + '" width="100%" />';
+  }
+  function add(){
+    var host=document.getElementById("host").value;
+    var index=document.getElementById("index");
+    var newIndex=(parseInt(index.value) + 1).toString();
+    index.value=newIndex
+    var url=host.replace("#",newIndex)
+    document.getElementById("img").innerHTML='<img src="http://' + url + '" width="100%" />';
+  }
+ </script>
+ </head>
+ <body>
+  <h1>连续地址图片查看</h1>
+  <p>输入不含『http://』的图片地址，包含一个#号，会用下方的数值替换</p>
+  <form>
+   <input type="text" name="name" id="host" style="width: 100%;"/><br>
+   数值：<input type="text" name="index" id="index" /><br><br>
+   <button type="button" name="btnadd" onclick="add()" style="height:80px;width:120px">增加</button>
+   <button type="button" name="btnfet" onclick="fetch()" style="height:80px;width:120px"/>刷新</button>
+  </form>
+  <div id="img"></div>
+ </body>
+</html> 
